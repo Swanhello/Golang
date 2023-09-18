@@ -29,8 +29,7 @@ func contains(s []string, str string) bool{
 
 func CheckUserID(w http.ResponseWriter, r *http.Request) {
   id := r.URL.Query().Get("id")
-  b := contains(ids, id)
-  switch b {
+  switch contains(ids, id) {
     case true:
       fmt.Fprintln(w, "Hello, dear user!")
     case false:
