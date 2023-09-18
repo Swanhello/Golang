@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	ids := []string{"11111", "22222", "33333"}
+  ids := []string{"11111", "22222", "33333"}
   
   http.HandleFunc("/dyn-user", HelloUser)
   http.HandleFunc("/check-userid", CheckUserID)
-	http.ListenAndServe(":8080", nil)
+  http.ListenAndServe(":8080", nil)
 }
 
 func HelloUser(w http.ResponseWriter, r *http.Request) {
