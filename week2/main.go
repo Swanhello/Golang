@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+  "fmt"
+  "net/http"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 }
 
 func HelloUser(w http.ResponseWriter, r *http.Request) {
-	id := r.URL.Query().Get("id")
+  id := r.URL.Query().Get("id")
   fmt.Fprintln(w, "Hello, %s", id)
 }
 
@@ -28,7 +28,7 @@ func contains(s []string, str string) bool{
 }
 
 func CheckUserID(w http.ResponseWriter, r *http.Request) {
-	id := r.URL.Query().Get("id")
+  id := r.URL.Query().Get("id")
   b := contains(ids, id)
   switch b {
     case true:
